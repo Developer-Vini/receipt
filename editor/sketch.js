@@ -39,4 +39,23 @@ export function drawReceipt(p){
 
     p.endShape();
   }
+
+  function spiral(turns, radius, offset =0){
+    p.beginShape();
+
+    const steps = 500;
+
+    for (let i =0;i<=steps; i++){
+      const t = i/steps;
+      const angle = offset + t * p.PI * turns;
+
+      const r = radius * turns;
+
+      const x = p.cos(angle) * r;
+      const y = p.sin(angle) * r;
+
+      p.vertex(x,y);
+    }
+  }
+  p.endShape();
 }
