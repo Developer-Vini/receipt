@@ -59,3 +59,9 @@ export function drawReceipt(p){
   }
   p.endShape();
 }
+
+p.push();
+p.translate(cx, cy);
+
+p.noFill();
+p.stroke(0)
